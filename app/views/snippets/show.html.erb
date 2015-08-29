@@ -1,0 +1,24 @@
+<h1 style="font-weight:100"><%= @snippet.title %></h1>
+
+
+<!-- <script src="https://gist.github.com/tkhan003/942405c61d4f5693911a.js"></script> -->
+
+  <pre>
+    <code class="<%= @snippet.language.name.downcase %>">
+    <%= @snippet.body %>
+    hghfghgfh
+    fghfghfgh
+    fghf
+    </code>
+  </pre>
+
+<br>
+
+<hr>
+
+<%= link_to "Back", language_path(@snippet.language) %>
+
+
+<script>  
+  hljs.initHighlightingOnLoad();
+</script>

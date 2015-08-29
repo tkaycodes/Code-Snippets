@@ -1,0 +1,31 @@
+<%if @snippet.errors%>
+<ul>
+  <%@snippet.errors.full_messages.each do |x|%>
+  <li><%=x%></li>
+  <%end%>
+</ul>
+<%end%>
+
+<%=form_for @snippet, class:"form-group" do |s|%>
+  <%=s.label :language%>
+
+  <!-- in the params hash, everything gets passed to s (object).language_id (method) -->
+  <!-- Language.all is the collection, :id is the value of each in collection -->
+  <!-- name is the name in each in collection -->
+  <!-- first argument is s.language_id its value comes from everything that follows: -->
+  <%=s.collection_select :language_id, Language.all, :id, :name, {:prompt=>true}, {class: "form-control"}%><br>
+  <%=s.label :title%>
+  <%=s.text_field :title, class: "form-control"%>
+  <%=s.label :body%>
+  <%=s.text_area :body, class: "form-control"%><br>
+  <%=s.submit "Save Snippet", class: "btn btn-primary btn-sm"%>
+<%end%><br>
+
+<%=link_to "Back", root_path%>
+
+   
+
+
+
+
+

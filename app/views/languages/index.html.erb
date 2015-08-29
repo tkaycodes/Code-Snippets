@@ -1,0 +1,10 @@
+<ul class="list-group">
+  <%@languages.each do |x|%>
+    <%=link_to language_path(x) do%>
+    <li class="list-group-item" style="border-radius:0px;">
+             <span class="badge"><%=x.snippets.count%></span>
+        <%=x.name%> Snippets
+      </li>
+    <%end%>
+  <%end%>
+</ul>
