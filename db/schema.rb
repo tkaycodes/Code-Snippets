@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150831155316) do
+ActiveRecord::Schema.define(version: 20150901201222) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20150831155316) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.string   "category"
+    t.string   "notes"
   end
 
   add_index "snippets", ["language_id"], name: "index_snippets_on_language_id", using: :btree

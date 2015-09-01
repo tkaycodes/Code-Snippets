@@ -17,7 +17,7 @@ function load() {
     console.log(selected);
     if (selected == "Ruby"){
       // console.log("you selected Ruby");
-      $('#snippet_category').html("<option val=\"\">Options for Ruby</option><option val=\"General\">General</option><option val=\"Rails General\">Rails</option><option val=\"Active Record\">Active Record</option>");
+      $('#snippet_category').html("<option val=\"\">Options for Ruby</option><option val=\"General\">General</option><option val=\"Rails General\">Rails General</option><option val=\"Active Record\">Active Record</option>");
     }
     else if(selected == "Javascript"){
         $('#snippet_category').html("<option val=\"\">Options for Javascript</option><option val=\"jQuery\">jQuery</option><option val=\"General\">General</option>");

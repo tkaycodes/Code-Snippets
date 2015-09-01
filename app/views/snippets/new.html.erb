@@ -19,11 +19,13 @@
   <!-- <select class="form-control"> -->
     <!-- <option name=":category">Ruby</option> -->
   <!-- </select> -->
-  <%#=s.text_field :category, class: "form-control", placeholder: "eg. Rails "%><br>
+  <%#=s.text_field :category, class: "form-control", placeholder: "eg. Rails "%><br><br>
   <%=s.label :title%>
   <%=s.text_field :title, class: "form-control"%>
   <%=s.label :body%>
-  <%=s.text_area :body, class: "form-control"%><br>
+  <%=s.text_area :body, class: "form-control", placeholder: "Enter your code/snippet here"%><br><br>
+  <%=s.label :notes%>
+  <%=s.text_field :notes, class: "form-control", placeholder: "Enter any note(s) here - optional"%><br>
   <%=s.submit "Save Snippet", class: "btn btn-primary btn-sm"%>
 <%end%><br>
 
