@@ -13,7 +13,9 @@
   <!-- Language.all is the collection, :id is the value of each in collection -->
   <!-- name is the name in each in collection -->
   <!-- first argument is s.language_id its value comes from everything that follows: -->
-  <%=s.collection_select :language_id, Language.all, :id, :name, {:prompt=>true}, {class: "form-control"}%><br>
+  <%=s.collection_select :language_id, Language.all, :id, :name, {:prompt=>true}, {class: "form-control"}%>
+    <%=s.label :category%>
+  <%=s.text_field :category, class: "form-control", placeholder: "eg. Rails "%><br>
   <%=s.label :title%>
   <%=s.text_field :title, class: "form-control"%>
   <%=s.label :body%>

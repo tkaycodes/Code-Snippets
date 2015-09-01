@@ -1,9 +1,14 @@
 <h1 style="font-weight:100"><%=@language.name%> Snippets</h1><hr>
 
 <div class="list-group">
-<%@language.snippets.each do |snippet|%>
-  <%=link_to snippet.title, snippet_path(snippet), class: "list-group-item"%><br>
-<%end%>
+  <%@language.snippets.each do |snippet|%>
+  <div class="list-group-item">
+      <span class="badge">1</span>
+
+      <%=link_to snippet.title, snippet_path(snippet), class: "list-group-item"%>
+  </div>
+
+    <%end%>
 </div>
 
 
