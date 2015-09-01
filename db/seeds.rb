@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-languages = ["Ruby", "Javascript", "HTML", "CSS"];
+languages = ["Ruby", "Javascript", "HTML", "CSS", "GIT", "Bash"];
 
 languages.each do |x|
   Language.create(name:x)
