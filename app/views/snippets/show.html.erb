@@ -11,15 +11,16 @@
       </code>
     </pre>
   </div>
-  <div class="col-sm-4">
-    <div class="stickeynote">
-      <span style="font-weight:bold">Note:</span><br>
-      <div>
-        <%=@snippet.notes%>
+  <%if !@snippet.notes.empty?%>
+    <div class="col-sm-4">
+      <div class="stickeynote">
+        <span style="font-weight:bold">Note:</span><br>
+        <div>
+          <%=@snippet.notes%>
+        </div>
       </div>
-
     </div>
-  </div>
+  <%end%>
 </div>
 
 
