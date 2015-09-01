@@ -17,18 +17,20 @@ function load() {
     console.log(selected);
     if (selected == "Ruby"){
       // console.log("you selected Ruby");
-      $('#snippet_category').html("<option val=\"Rails\">Rails</option><option val=\"General\">General</option>");
+      $('#snippet_category').html("<option val=\"\">Options for Ruby</option><option val=\"Rails\">Rails</option><option val=\"General\">General</option>");
     }
-    else{
-      if (selected == "Javascript"){
-        $('#snippet_category').html("<option val=\"jQuery\">jQuery</option><option val=\"General\">General</option>");
+    else if(selected == "Javascript"){
+        $('#snippet_category').html("<option val=\"\">Options for Javascript</option><option val=\"jQuery\">jQuery</option><option val=\"General\">General</option>");
+      }
+      else{
+        $('#snippet_category').html("<option val=\"\"></option>");
       }
       // console.log("you selected somehhing else");
     }
     // alert('changed');
     // $(this);
     // console.log($("snippet_language_id :selected").html());
-  });
+  );
 
   // $('#snippet_category').change(function(){
     // alert('changed');
