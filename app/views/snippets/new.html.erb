@@ -15,7 +15,11 @@
   <!-- first argument is s.language_id its value comes from everything that follows: -->
   <%=s.collection_select :language_id, Language.all, :id, :name, {:prompt=>true}, {class: "form-control"}%>
     <%=s.label :category%>
-  <%=s.text_field :category, class: "form-control", placeholder: "eg. Rails "%><br>
+    <%=s.collection_select :category, [], [], [], {:prompt=>"Optional - eg. Rails"}, class: "form-control"%>
+  <!-- <select class="form-control"> -->
+    <!-- <option name=":category">Ruby</option> -->
+  <!-- </select> -->
+  <%#=s.text_field :category, class: "form-control", placeholder: "eg. Rails "%><br>
   <%=s.label :title%>
   <%=s.text_field :title, class: "form-control"%>
   <%=s.label :body%>

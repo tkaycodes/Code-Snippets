@@ -6,12 +6,10 @@ class SnippetsController < ApplicationController
   def create
     # render text: params
     @snippet  = Snippet.new(snippet_params)
-
-    # @language = Language.find(params[:language_id])
-    if @snippet.save
-      
+    @language = Language.find(params[:snippet][:language_id]);
+    if @snippet.save 
       # redirect_to language_path(id: params[:snippet][:language_id]), notice: "saved";
-      redirect_to language_path(@snippet.language), notice: "saved";
+      redirect_to language_path(@language), notice: "saved";
     else
       render 'new'
     end
